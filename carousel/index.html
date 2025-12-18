@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offset练习</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <button>animation</button>
+    <br />
+    <br />
+    <div class="box" style="left: 0px"></div>
+
+    <script>
+      const btn = document.getElementsByTagName("button")[0];
+      const div = document.getElementsByTagName("div")[0];
+
+      // shine
+      // btn.onclick = () => {
+      //   div.style.left = "500px";
+      // }
+
+      btn.onclick = () => {
+        setInterval(() => {
+          div.style.left = div.offsetLeft + 100 + 'px';
+        }, 500)
+      }
+    </script>
+  </body>
+</html>
